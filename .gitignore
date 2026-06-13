@@ -8,3 +8,7 @@ codegen/
 
 # macOS
 .DS_Store
+
+# MathWorks plugin package (copyrighted, regenerate with packageGazeboPlugin)
+gazebo/GazeboPlugin.zip
+gazebo/GazeboPlugin/

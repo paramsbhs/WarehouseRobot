@@ -52,6 +52,8 @@ benchmarkPlanners   % prioritized vs CBS benchmark (takes a few minutes)
 
 Each script is self-contained and uses relative paths only. `demoSingleRobot` and `demoMultiRobot` open an animated figure; `benchmarkPlanners` prints a summary table, produces comparison plots, and ends with an animated CBS solution.
 
+For the optional Gazebo co-simulation (Simulink + Gazebo 11 in Docker), see [docs/gazebo-setup.md](docs/gazebo-setup.md).
+
 ## Demo/Results
 
 <!-- Record short screen captures of demoSingleRobot, demoMultiRobot, and the

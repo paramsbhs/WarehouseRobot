@@ -1,0 +1,66 @@
+% Resume bullet points -- Warehouse Robotics Simulation
+% MathWorks Excellence in Innovation, Project 212
+% Framing: autonomous driving / control systems.
+% Drop the \item lines into your existing resume's itemize/cvitems block.
+
+%========================================================================
+% VERSION A -- Concise (4 bullets), for a tight one-page resume
+%========================================================================
+\begin{itemize}
+  \item Designed a closed-loop autonomous navigation stack in MATLAB for a
+        differential-drive mobile robot, integrating motion planning,
+        trajectory tracking, and collision avoidance over a simulated
+        50\,m\,$\times$\,30\,m environment.
+  \item Implemented a pure-pursuit path-tracking controller with tunable
+        lookahead and saturated linear/angular velocity commands, driving a
+        unicycle vehicle model along planned trajectories with closed-loop
+        pose feedback.
+  \item Developed and benchmarked decision-making and motion-planning
+        algorithms (A*, space-time prioritized planning, and optimal
+        Conflict-Based Search) for multi-vehicle coordination, evaluating
+        tracking cost, makespan, and runtime as fleet size scaled from 2 to 8.
+  \item Validated the control stack in a 3D physics simulator (Gazebo
+        co-simulation) by commanding the vehicle through the MATLAB
+        co-simulation interface, including differential-drive inverse
+        kinematics mapping body velocities to wheel commands.
+\end{itemize}
+
+%========================================================================
+% VERSION B -- Detailed (6 bullets), for a projects section / CV
+%========================================================================
+\begin{itemize}
+  \item Built a full autonomous-navigation pipeline -- perception map,
+        global planner, and motion controller -- in MATLAB for a
+        differential-drive robot (MathWorks Excellence in Innovation
+        Project~212), modeling the environment as an obstacle-inflated
+        occupancy grid for guaranteed clearance.
+  \item Implemented a pure-pursuit lateral/longitudinal controller that tracks
+        planned waypoints using a tunable lookahead distance and bounded
+        linear and angular velocity, closing the loop on the vehicle's pose at
+        each timestep over a kinematic unicycle model.
+  \item Derived and applied differential-drive inverse kinematics to convert
+        commanded body velocity ($v$, $\omega$) into left/right wheel
+        angular-velocity setpoints, the actuation layer between the
+        controller and the vehicle.
+  \item Engineered global path planning with A* and extended it to a
+        space-time ($x$,$y$,$t$) planner with a shared reservation table for
+        multi-vehicle coordination, resolving vehicle--vehicle vertex and
+        head-on swap conflicts.
+  \item Implemented Conflict-Based Search (CBS), a complete and optimal
+        multi-agent motion planner, and built a benchmark quantifying the
+        optimality--compute trade-off versus the prioritized baseline
+        (sum-of-costs, makespan, success rate, planning time vs.\ fleet size).
+  \item Performed simulation-based validation of the autonomy stack in Gazebo
+        via co-simulation, commanding the vehicle through the Robotics System
+        Toolbox \texttt{gz} interface; stood up a reproducible headless
+        Gazebo~11 environment in Docker on Apple Silicon (arm64 plugin build,
+        software-OpenGL rendering over VNC).
+\end{itemize}
+
+%========================================================================
+% Skills line (optional)
+%========================================================================
+% \textbf{Skills:} MATLAB, control systems (pure-pursuit path tracking,
+% closed-loop feedback), motion planning (A*, multi-agent path finding/CBS),
+% differential-drive kinematics, autonomous navigation, Gazebo co-simulation,
+% Docker.
